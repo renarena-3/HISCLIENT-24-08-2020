@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="text-center">
+        <div class="col-sm-6">
+            <div class="card ">
+                <div class="card-header">
+                    <div class="card-title">
+                        Welcome Admin
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="newPlanForm" (submit)="savePlan()">
+                        <div class="col-md-4 mb-3">
+                            <select class="custom-select" id="planname" formControlName="planname">
+                                <option selected>Choose...</option>
+                                <option value="ccap">CCAP</option>
+                                <option value="snap">SNAP</option>
+                            </select>
+                        </div>
+                        <div class="col-md-8 mb-6">
+                            <textarea class="form-control" id="plandesc"  formControlName="plandesc" placeholder="Plan Desc"></textarea>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <input type="date" class="form-control" id="planstartdt" formControlName="planstartdt" placeholder="Plan Start Date">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <input type="date" class="form-control" id="plansenddt" formControlName="planenddt" placeholder="Plan End Date">
+                        </div>
+                      
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

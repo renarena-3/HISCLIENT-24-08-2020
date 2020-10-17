@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="col-sm-8">
+    <div class="card">
+        <div class="card-title text-center">
+            Accounts
+        </div>
+        <div class="text-right">
+            <button class="btn btn-info" (click)="addAcc()">Add New Account</button>
+        </div>
+       
+        <div class="card-body">
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+                        <th>Account Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let account of pageData">
+                        <td>{{account.accid}}</td>
+                        <td>{{account.firstname}}</td>
+                        <td>{{account.email}}</td>
+                        <td>{{account.role}}</td>
+                        <td colspan="3">
+                            <button class="btn btn-danger" (click)="delete(account.accid)">Delete</button>
+                            <button  class="btn btn-primary" (click)="update(account.accid)">Details</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <tfoot>
+              <ul class="nav nav-pills">
+                  <li *ngFor="let p of pages;let i=index">
+                    <a class="nav-link active" (click)="setPage(i,$event)" href="">{{i}}</a>
+                  </li>
+              </ul>
+            </tfoot>
+        </div>
+    </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+

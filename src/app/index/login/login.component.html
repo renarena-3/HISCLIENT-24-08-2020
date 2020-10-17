@@ -1,0 +1,17 @@
+<div class="container-fluid" style="border: 1;" >
+    <div class="card" style="width: 500px; height: 400px;">
+        <div class="card-header">
+            <h3>Welcome To HIS Application</h3>
+        </div>
+        <div class="card-body">
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" style="width: 300px;">
+                <label for="username">User Name</label>
+                <label for="password">Pass Word</label>
+                <input type="password" class="form-control" id="password" name="password" ngModel>
+                <div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

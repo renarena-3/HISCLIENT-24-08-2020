@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="text-center">
+        <div class="col-sm-6">
+            <div class="card ">
+                <div class="card-header">
+                    <div class="card-title">
+                        Welcome Admin
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="accDtlsForm" (submit)="editForm()">
+                        <div class="col-md-4 mb-3">
+                            <input type="text" class="form-control" id="accid" formControlName="accid"  disabled>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <input type="text" class="form-control" id="firstname" formControlName="firstname" placeholder="First Name">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <input type="text" class="form-control" id="lastname"  formControlName="lastname" placeholder="Last Name">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <input type="text" class="form-control" id="email" formControlName="email" placeholder="Email">
+                        </div>
+                        <div class="form-row">
+                            <div class = "radio">
+                                <label>
+                                   <input type = "radio" name = "gender" id = "male" value = "m" formControlName="gender">Male
+                                </label>
+                             </div>
+                             <div class = "radio">
+                                <label>
+                                   <input type = "radio" name = "gender" id = "optionsRadios2" value = "f" formControlName="gender">
+                                     Female
+                                </label>
+                             </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <select class="custom-select" id="role" formControlName="role">
+                                <option selected>Choose...</option>
+                                <option value="1">Admin</option>
+                                <option value="2">Caseworker</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
